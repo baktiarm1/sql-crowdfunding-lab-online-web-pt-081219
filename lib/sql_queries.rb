@@ -9,6 +9,7 @@
 def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_title
   "SELECT title.projects, amount.pledges
    FROM projects
+    ON projects.id = pledges.project_id
    GROUP_BY projects.title;
   "
 end
